@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">">
+</head>
+<body>
+<div class="container">
+    <h2>Danh Sách Sinh Viên</h2>
+    <hr>
+    
+    <div class="row">
+        <div class="col-md-4">
+            <form action="" method="post" id="std_form">
+                <legend>Form thêm mới</legend>
+                <div class="form-group">
+                    <label for="">Mã</label>
+                    <input type="text" class="form-control" id="code" placeholder="Input code">
+                </div>
+                <div class="form-group">
+                    <label for="">Họ tên</label>
+                    <input type="text" class="form-control" id="name" placeholder="Input Tên">
+                </div>
+                <div class="row">
+                    <div class="col-md-4"> 
+                        <div class="form-group">
+                        <label for="">Toán</label>
+                        <input type="text" class="form-control" id="toan" placeholder="Input Toán">
+                    </div></div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="">Lý</label>
+                            <input type="text" class="form-control" id="ly" placeholder="Input Lý">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="">Hóa</label>
+                            <input type="text" class="form-control" id="hoa" placeholder="Input Hóa">
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-primary" onclick="them_moi()">Thêm mới</button>
+            </form>
+        </div>
+        <div class="col-md-8">
+            <form action="" class="form-inline" role="form">
+                <div class="form-group">
+                    <input type="emall" class="form-control" id="search_code" placeholder="Input Code">
+                </div>
+                <button type="button" class="btn btn-primary" onclick="tim_kiem_code()">Lọc</button>
+            </form>
+            <hr>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Mã</th>
+                        <th>Họ tên</th>
+                        <th>Toán</th>
+                        <th>Lý</th>
+                        <th>Hóa</th>
+                        <th>Điểm trung bình</th>
+                        <th>Xếp loại</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id = "tbody-list" >
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="dist/app.js"></script>
+</body>
+</html>
